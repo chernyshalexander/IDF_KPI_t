@@ -1,4 +1,6 @@
-﻿namespace IDF_KPI_t
+﻿using IDF_KPI_t.Utils;
+
+namespace IDF_KPI_t
 {
     partial class FormMain
     {
@@ -144,9 +146,9 @@
             this.iDF_OUTDataSet1 = new IDF_KPI_t.IDF_OUTDataSet();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.iDF_2013DataSet = new IDF_KPI_t.IDF_2013DataSet();
+
             this.storeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storeTableAdapter = new IDF_KPI_t.IDF_2013DataSetTableAdapters.StoreTableAdapter();
+
             this.pF_PassTrafficFactTableAdapter = new IDF_KPI_t.IDF_OUTDataSetTableAdapters.PF_PassTrafficFactTableAdapter();
             this.tableAdapterManager = new IDF_KPI_t.IDF_OUTDataSetTableAdapters.TableAdapterManager();
             this.pF_CategoryQuotaTableAdapter = new IDF_KPI_t.IDF_OUTDataSetTableAdapters.PF_CategoryQuotaTableAdapter();
@@ -181,7 +183,7 @@
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pF_StoreDateActiveDataGridView = new Zuby.ADGV.AdvancedDataGridView();
-            this.dateDataGridViewTextBoxColumn = new IDF_KPI_t.CalendarColumn();
+            this.dateDataGridViewTextBoxColumn = new IDF_KPI_t.Utils.CalendarColumn();
             this.storeCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.planDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.forecastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -204,14 +206,14 @@
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pF_PassTrafficFactDataGridView = new Zuby.ADGV.AdvancedDataGridView();
-            this.Date = new IDF_KPI_t.CalendarColumn();
+            this.Date = new IDF_KPI_t.Utils.CalendarColumn();
             this.Month = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Terminal = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.DestinationGroup = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.PassQtyFact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calendarColumn1 = new IDF_KPI_t.CalendarColumn();
+            this.calendarColumn1 = new IDF_KPI_t.Utils.CalendarColumn();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageStoreDate.SuspendLayout();
@@ -245,7 +247,6 @@
             this.bindingNavigator5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pFCategoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDF_OUTDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDF_2013DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_StoreDateActiveDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactDataGridView)).BeginInit();
@@ -1390,20 +1391,7 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // iDF_2013DataSet
-            // 
-            this.iDF_2013DataSet.DataSetName = "IDF_2013DataSet";
-            this.iDF_2013DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // storeBindingSource
-            // 
-            this.storeBindingSource.DataMember = "Store";
-            this.storeBindingSource.DataSource = this.iDF_2013DataSet;
-            // 
-            // storeTableAdapter
-            // 
-            this.storeTableAdapter.ClearBeforeFill = true;
+
             // 
             // pF_PassTrafficFactTableAdapter
             // 
@@ -2170,7 +2158,6 @@
             this.bindingNavigator5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pFCategoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDF_OUTDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDF_2013DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_StoreDateActiveDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactDataGridView)).EndInit();
@@ -2194,9 +2181,9 @@
         private IDF_OUTDataSetTableAdapters.PF_CurrencyRateTableAdapter pF_CurrencyRateTableAdapter;
         private System.Windows.Forms.BindingSource pF_PassTrafficBindingSource;
         private IDF_OUTDataSetTableAdapters.PF_PassTrafficTableAdapter pF_PassTrafficTableAdapter;
-        private IDF_2013DataSet iDF_2013DataSet;
+
         private System.Windows.Forms.BindingSource storeBindingSource;
-        private IDF_2013DataSetTableAdapters.StoreTableAdapter storeTableAdapter;
+
         private IDF_OUTDataSet iDF_OUTDataSet1;
         private System.Windows.Forms.BindingSource pFCategoryBindingSource;
         private IDF_OUTDataSetTableAdapters.PF_CategoryTableAdapter pF_CategoryTableAdapter;

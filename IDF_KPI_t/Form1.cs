@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IDF_KPI_t.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,7 @@ namespace IDF_KPI_t
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            RestoreSate();
+            RestoreState();
             LoadDataTables();
             LoadAutoRowAddMode();
             //this.pF_CategoryQuotaDataGridView.CellValueChanged+=new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellValueChanged);
@@ -68,8 +69,6 @@ namespace IDF_KPI_t
         {
             // TODO: This line of code loads data into the 'iDF_OUTDataSet1.PF_Category' table. You can move, or remove it, as needed.
             this.pF_CategoryTableAdapter.Fill(this.iDF_OUTDataSet1.PF_Category);
-            // TODO: This line of code loads data into the 'iDF_2013DataSet.Store' table. You can move, or remove it, as needed.
-            this.storeTableAdapter.Fill(this.iDF_2013DataSet.Store);
             // TODO: This line of code loads data into the 'iDF_OUTDataSet.PF_PassTraffic' table. You can move, or remove it, as needed.
             this.pF_PassTrafficTableAdapter.Fill(this.iDF_OUTDataSet.PF_PassTraffic);
             // TODO: This line of code loads data into the 'iDF_OUTDataSet.PF_CurrencyRate' table. You can move, or remove it, as needed.
@@ -198,7 +197,7 @@ namespace IDF_KPI_t
             Properties.Settings.Default.Save();
         }
 
-        private void RestoreSate()
+        private void RestoreState()
         {
             if (Properties.Settings.Default.Maximised)
             {

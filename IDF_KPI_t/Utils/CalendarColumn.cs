@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace IDF_KPI_t
+namespace IDF_KPI_t.Utils
 {
  
 
