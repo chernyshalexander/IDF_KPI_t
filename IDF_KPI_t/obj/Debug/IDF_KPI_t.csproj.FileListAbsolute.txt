@@ -1,0 +1,13 @@
+c:\users\a.chernysh\documents\visual studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\Debug\IDF_KPI_t.Properties.Resources.resources
+c:\users\a.chernysh\documents\visual studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\Debug\IDF_KPI_t.csproj.GenerateResource.Cache
+c:\users\a.chernysh\documents\visual studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\Debug\IDF_KPI_t.FormMain.resources
+C:\Users\a.chernysh\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\bin\Debug\idf_kpi_de.exe.config
+C:\Users\a.chernysh\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\bin\Debug\idf_kpi_de.exe.manifest
+C:\Users\a.chernysh\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\bin\Debug\idf_kpi_de.application
+C:\Users\a.chernysh\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\bin\Debug\idf_kpi_de.exe
+C:\Users\a.chernysh\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\bin\Debug\idf_kpi_de.pdb
+C:\Users\a.chernysh\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\Debug\idf_kpi_de.exe.manifest
+C:\Users\a.chernysh\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\Debug\idf_kpi_de.application
+C:\Users\a.chernysh\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\Debug\idf_kpi_de.exe
+C:\Users\a.chernysh\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\Debug\idf_kpi_de.pdb
+C:\Users\a.chernysh\documents\visual studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\Debug\IDF_KPI_t.csprojResolveAssemblyReference.cache
