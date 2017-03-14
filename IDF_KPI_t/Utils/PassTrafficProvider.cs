@@ -5,6 +5,7 @@ using System.Data;
 
 namespace IDF_KPI_t.Utils
 {
+
     interface IPassTrafficProvider
     {
 
@@ -16,7 +17,7 @@ namespace IDF_KPI_t.Utils
 
     class DailyPassTrafficProvider : IPassTrafficProvider
     {
-        private const int dateCol = 4;
+        private const int dateCol = 2;
         private const int dateRow = 0;
         private const int headerRow = 3;
         private const int vpoHeaderRow = 41;
@@ -71,11 +72,11 @@ namespace IDF_KPI_t.Utils
         {
             switch (terminal)
             {
-                case "SVO-A": return Convert.ToInt32(tbl0.Rows[AmvlRow][AmvlCol].ToString());
-                case "SVO-F": return Convert.ToInt32(tbl0.Rows[FmvlRow][passCol].ToString());
-                case "SVO-E": return Convert.ToInt32(tbl0.Rows[EmvlRow][passCol].ToString()); ;
-                case "SVO-D":
-                    if (flightGroup == "МВЛ") { return Convert.ToInt32(tbl0.Rows[DmvlRow][passCol].ToString()); }
+                case Terminal.A: return Convert.ToInt32(tbl0.Rows[AmvlRow][AmvlCol].ToString());
+                case Terminal.F: return Convert.ToInt32(tbl0.Rows[FmvlRow][passCol].ToString());
+                case Terminal.E: return Convert.ToInt32(tbl0.Rows[EmvlRow][passCol].ToString()); ;
+                case Terminal.D:
+                    if (flightGroup == Terminal.International) { return Convert.ToInt32(tbl0.Rows[DmvlRow][passCol].ToString()); }
                     else { return Convert.ToInt32(tbl0.Rows[DvvlRow][passCol].ToString()); }
                 default: return 0;
             }
@@ -89,7 +90,7 @@ namespace IDF_KPI_t.Utils
                 bool dateName = tbl0.Rows[dateRow][termNameCol].ToString() == "Ежедневный отчет за";
                 bool passHeader = tbl0.Rows[headerRow][passCol].ToString() == "Пасс";
                 bool vpoHeader = tbl0.Rows[vpoHeaderRow][AmvlCol].ToString() == "ВПО";
-                bool DMVL = tbl0.Rows[DmvlRow][termNameCol].ToString() == "D МBЛ";
+                bool DMVL = tbl0.Rows[DmvlRow][termNameCol].ToString() == "D MBЛ";
                 bool DVVL = tbl0.Rows[DvvlRow][termNameCol].ToString() == "D BBЛ";
                 bool EMVL = tbl0.Rows[EmvlRow][termNameCol].ToString() == "E";
                 bool FMVL = tbl0.Rows[FmvlRow][termNameCol].ToString() == "F";

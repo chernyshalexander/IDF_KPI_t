@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="idf_kpi_de.exe" size="989696">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="idf_kpi_de.exe" size="993280">
       <assemblyIdentity name="idf_kpi_de" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e/oOvFiY5h4br6kaOXGsIkA1Y9jlszrPevhTPC4OycI=</dsig:DigestValue>
+        <dsig:DigestValue>wTvmZ203cgjzpVlc5NuylGutdUpHbF0N/I3+k4CHdvY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -26,3 +26,4 @@ C:\Users\alex_ch\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\D
 C:\Users\alex_ch\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\bin\Debug\Excel.dll
 C:\Users\alex_ch\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\bin\Debug\ICSharpCode.SharpZipLib.dll
 C:\Users\alex_ch\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\bin\Debug\Excel.pdb
+C:\Users\alex_ch\Documents\Visual Studio 2015\Projects\IDF_KPI_t\IDF_KPI_t\obj\Debug\IDF_KPI_t.csprojResolveAssemblyReference.cache

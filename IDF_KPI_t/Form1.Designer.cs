@@ -32,22 +32,30 @@ namespace IDF_KPI_t
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton28 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.tsbLoadExcel = new System.Windows.Forms.ToolStripButton();
+            this.tsbSaveData = new System.Windows.Forms.ToolStripButton();
+            this.tsbRevert = new System.Windows.Forms.ToolStripButton();
+            this.tsbAutoRowAddMode = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageStoreDate = new System.Windows.Forms.TabPage();
+            this.pF_StoreDateActiveDataGridView = new Zuby.ADGV.AdvancedDataGridView();
+            this.dateDataGridViewTextBoxColumn = new IDF_KPI_t.Utils.CalendarColumn();
+            this.storeCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.planDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.forecastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.factDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pF_StoreDateActiveBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDF_OUTDataSet = new IDF_KPI_t.IDF_OUTDataSet();
             this.pF_PassTrafficFactBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -67,6 +75,9 @@ namespace IDF_KPI_t
             this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pF_CurrencyRateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -82,6 +93,14 @@ namespace IDF_KPI_t
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPageKPI = new System.Windows.Forms.TabPage();
             this.pF_KPIDataGridView = new Zuby.ADGV.AdvancedDataGridView();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.storeCodeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avgReceptPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.avgReceptForecastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.convCoeffPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.convCoeffForecastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pF_KPIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
@@ -97,6 +116,15 @@ namespace IDF_KPI_t
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPageCatQuota = new System.Windows.Forms.TabPage();
             this.pF_CategoryQuotaDataGridView = new Zuby.ADGV.AdvancedDataGridView();
+            this.yearDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.monthDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.pFCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDF_OUTDataSet1 = new IDF_KPI_t.IDF_OUTDataSet();
+            this.storeCodeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quotaPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quotaForecastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pF_CategoryQuotaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
@@ -112,6 +140,13 @@ namespace IDF_KPI_t
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPagePassTraffic = new System.Windows.Forms.TabPage();
             this.pF_PassTrafficDataGridView = new Zuby.ADGV.AdvancedDataGridView();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pF_PassTrafficBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton22 = new System.Windows.Forms.ToolStripButton();
@@ -126,6 +161,14 @@ namespace IDF_KPI_t
             this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPagePassTrafficFact = new System.Windows.Forms.TabPage();
+            this.pF_PassTrafficFactDataGridView = new Zuby.ADGV.AdvancedDataGridView();
+            this.Date = new IDF_KPI_t.Utils.CalendarColumn();
+            this.Month = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Terminal = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.DestinationGroup = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.PassQtyFact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pF_PassTrafficFactBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton29 = new System.Windows.Forms.ToolStripButton();
@@ -142,13 +185,9 @@ namespace IDF_KPI_t
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.pFCategoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iDF_OUTDataSet1 = new IDF_KPI_t.IDF_OUTDataSet();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-
             this.storeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-
             this.pF_PassTrafficFactTableAdapter = new IDF_KPI_t.IDF_OUTDataSetTableAdapters.PF_PassTrafficFactTableAdapter();
             this.tableAdapterManager = new IDF_KPI_t.IDF_OUTDataSetTableAdapters.TableAdapterManager();
             this.pF_CategoryQuotaTableAdapter = new IDF_KPI_t.IDF_OUTDataSetTableAdapters.PF_CategoryQuotaTableAdapter();
@@ -157,15 +196,6 @@ namespace IDF_KPI_t
             this.pF_PassTrafficTableAdapter = new IDF_KPI_t.IDF_OUTDataSetTableAdapters.PF_PassTrafficTableAdapter();
             this.pF_StoreDateActiveTableAdapter = new IDF_KPI_t.IDF_OUTDataSetTableAdapters.PF_StoreDateActiveTableAdapter();
             this.pF_CategoryTableAdapter = new IDF_KPI_t.IDF_OUTDataSetTableAdapters.PF_CategoryTableAdapter();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.monthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.yearDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.monthDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -182,41 +212,11 @@ namespace IDF_KPI_t
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pF_StoreDateActiveDataGridView = new Zuby.ADGV.AdvancedDataGridView();
-            this.dateDataGridViewTextBoxColumn = new IDF_KPI_t.Utils.CalendarColumn();
-            this.storeCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.planDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.forecastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.factDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storeCodeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avgReceptPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.avgReceptForecastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.convCoeffPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.convCoeffForecastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storeCodeDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quotaPlanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quotaForecastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pF_PassTrafficFactDataGridView = new Zuby.ADGV.AdvancedDataGridView();
-            this.Date = new IDF_KPI_t.Utils.CalendarColumn();
-            this.Month = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Terminal = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.DestinationGroup = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.PassQtyFact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calendarColumn1 = new IDF_KPI_t.Utils.CalendarColumn();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageStoreDate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pF_StoreDateActiveDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_StoreDateActiveBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDF_OUTDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactBindingNavigator)).BeginInit();
@@ -233,6 +233,8 @@ namespace IDF_KPI_t
             this.bindingNavigator2.SuspendLayout();
             this.tabPageCatQuota.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pF_CategoryQuotaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pFCategoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iDF_OUTDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_CategoryQuotaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
             this.bindingNavigator3.SuspendLayout();
@@ -242,14 +244,11 @@ namespace IDF_KPI_t
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).BeginInit();
             this.bindingNavigator4.SuspendLayout();
             this.tabPagePassTrafficFact.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).BeginInit();
             this.bindingNavigator5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pFCategoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDF_OUTDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pF_StoreDateActiveDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -258,50 +257,61 @@ namespace IDF_KPI_t
             this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton28,
-            this.toolStripButton7,
-            this.toolStripButton14});
+            this.tsbLoadExcel,
+            this.tsbSaveData,
+            this.tsbRevert,
+            this.tsbAutoRowAddMode});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(953, 37);
+            this.toolStrip1.Size = new System.Drawing.Size(779, 37);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton28
+            // tsbLoadExcel
             // 
-            this.toolStripButton28.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripButton28.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton28.Image")));
-            this.toolStripButton28.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton28.Name = "toolStripButton28";
-            this.toolStripButton28.Size = new System.Drawing.Size(67, 34);
-            this.toolStripButton28.Text = "Save";
-            this.toolStripButton28.Click += new System.EventHandler(this.SaveItem_Click);
+            this.tsbLoadExcel.Image = ((System.Drawing.Image)(resources.GetObject("tsbLoadExcel.Image")));
+            this.tsbLoadExcel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbLoadExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLoadExcel.Name = "tsbLoadExcel";
+            this.tsbLoadExcel.Size = new System.Drawing.Size(69, 34);
+            this.tsbLoadExcel.Text = "Load";
+            this.tsbLoadExcel.Click += new System.EventHandler(this.LoadExcel_Click);
             // 
-            // toolStripButton7
+            // tsbSaveData
             // 
-            this.toolStripButton7.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(76, 34);
-            this.toolStripButton7.Text = "Revert";
-            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
+            this.tsbSaveData.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tsbSaveData.Image = ((System.Drawing.Image)(resources.GetObject("tsbSaveData.Image")));
+            this.tsbSaveData.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbSaveData.Name = "tsbSaveData";
+            this.tsbSaveData.Size = new System.Drawing.Size(67, 34);
+            this.tsbSaveData.Text = "Save";
+            this.tsbSaveData.Click += new System.EventHandler(this.SaveItem_Click);
             // 
-            // toolStripButton14
+            // tsbRevert
             // 
-            this.toolStripButton14.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton14.BackColor = System.Drawing.SystemColors.Control;
-            this.toolStripButton14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.BackgroundImage")));
-            this.toolStripButton14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.toolStripButton14.CheckOnClick = true;
-            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
-            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(159, 34);
-            this.toolStripButton14.Text = "\"Auto row add\" Mode";
-            this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
+            this.tsbRevert.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.tsbRevert.Image = ((System.Drawing.Image)(resources.GetObject("tsbRevert.Image")));
+            this.tsbRevert.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbRevert.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRevert.Name = "tsbRevert";
+            this.tsbRevert.Size = new System.Drawing.Size(76, 34);
+            this.tsbRevert.Text = "Revert";
+            this.tsbRevert.Click += new System.EventHandler(this.Revert_Click);
+            // 
+            // tsbAutoRowAddMode
+            // 
+            this.tsbAutoRowAddMode.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.tsbAutoRowAddMode.BackColor = System.Drawing.SystemColors.Control;
+            this.tsbAutoRowAddMode.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbAutoRowAddMode.BackgroundImage")));
+            this.tsbAutoRowAddMode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tsbAutoRowAddMode.CheckOnClick = true;
+            this.tsbAutoRowAddMode.Image = ((System.Drawing.Image)(resources.GetObject("tsbAutoRowAddMode.Image")));
+            this.tsbAutoRowAddMode.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAutoRowAddMode.Name = "tsbAutoRowAddMode";
+            this.tsbAutoRowAddMode.Size = new System.Drawing.Size(159, 34);
+            this.tsbAutoRowAddMode.Text = "\"Auto row add\" Mode";
+            this.tsbAutoRowAddMode.Click += new System.EventHandler(this.AutoRowMode_Click);
             // 
             // tabControl1
             // 
@@ -316,7 +326,7 @@ namespace IDF_KPI_t
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(953, 453);
+            this.tabControl1.Size = new System.Drawing.Size(779, 453);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPageStoreDate
@@ -327,10 +337,88 @@ namespace IDF_KPI_t
             this.tabPageStoreDate.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageStoreDate.Name = "tabPageStoreDate";
             this.tabPageStoreDate.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageStoreDate.Size = new System.Drawing.Size(945, 424);
+            this.tabPageStoreDate.Size = new System.Drawing.Size(771, 424);
             this.tabPageStoreDate.TabIndex = 1;
             this.tabPageStoreDate.Text = "Дни работы магазина";
             this.tabPageStoreDate.UseVisualStyleBackColor = true;
+            // 
+            // pF_StoreDateActiveDataGridView
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pF_StoreDateActiveDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.pF_StoreDateActiveDataGridView.AutoGenerateColumns = false;
+            this.pF_StoreDateActiveDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pF_StoreDateActiveDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dateDataGridViewTextBoxColumn,
+            this.storeCodeDataGridViewTextBoxColumn,
+            this.planDataGridViewTextBoxColumn,
+            this.forecastDataGridViewTextBoxColumn,
+            this.factDataGridViewTextBoxColumn,
+            this.idDataGridViewTextBoxColumn});
+            this.pF_StoreDateActiveDataGridView.DataSource = this.pF_StoreDateActiveBindingSource;
+            this.pF_StoreDateActiveDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pF_StoreDateActiveDataGridView.FilterAndSortEnabled = true;
+            this.pF_StoreDateActiveDataGridView.Location = new System.Drawing.Point(4, 4);
+            this.pF_StoreDateActiveDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.pF_StoreDateActiveDataGridView.Name = "pF_StoreDateActiveDataGridView";
+            this.pF_StoreDateActiveDataGridView.Size = new System.Drawing.Size(763, 391);
+            this.pF_StoreDateActiveDataGridView.TabIndex = 4;
+            this.pF_StoreDateActiveDataGridView.SortStringChanged += new System.EventHandler(this.DataGridView_SortStringChanged);
+            this.pF_StoreDateActiveDataGridView.FilterStringChanged += new System.EventHandler(this.DataGridView_FilterStringChanged);
+            this.pF_StoreDateActiveDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellValueChanged);
+            this.pF_StoreDateActiveDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pF_PassTrafficDataGridView_DataError);
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // storeCodeDataGridViewTextBoxColumn
+            // 
+            this.storeCodeDataGridViewTextBoxColumn.DataPropertyName = "StoreCode";
+            this.storeCodeDataGridViewTextBoxColumn.HeaderText = "Магазин";
+            this.storeCodeDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.storeCodeDataGridViewTextBoxColumn.Name = "storeCodeDataGridViewTextBoxColumn";
+            this.storeCodeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // planDataGridViewTextBoxColumn
+            // 
+            this.planDataGridViewTextBoxColumn.DataPropertyName = "Plan";
+            this.planDataGridViewTextBoxColumn.HeaderText = "План";
+            this.planDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.planDataGridViewTextBoxColumn.Name = "planDataGridViewTextBoxColumn";
+            this.planDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // forecastDataGridViewTextBoxColumn
+            // 
+            this.forecastDataGridViewTextBoxColumn.DataPropertyName = "Forecast";
+            this.forecastDataGridViewTextBoxColumn.HeaderText = "Прогноз";
+            this.forecastDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.forecastDataGridViewTextBoxColumn.Name = "forecastDataGridViewTextBoxColumn";
+            this.forecastDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // factDataGridViewTextBoxColumn
+            // 
+            this.factDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.factDataGridViewTextBoxColumn.DataPropertyName = "Fact";
+            this.factDataGridViewTextBoxColumn.HeaderText = "Факт";
+            this.factDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.factDataGridViewTextBoxColumn.Name = "factDataGridViewTextBoxColumn";
+            this.factDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // pF_StoreDateActiveBindingSource
             // 
@@ -369,7 +457,7 @@ namespace IDF_KPI_t
             this.pF_PassTrafficFactBindingNavigator.Name = "pF_PassTrafficFactBindingNavigator";
             this.pF_PassTrafficFactBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.pF_PassTrafficFactBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pF_PassTrafficFactBindingNavigator.Size = new System.Drawing.Size(937, 25);
+            this.pF_PassTrafficFactBindingNavigator.Size = new System.Drawing.Size(763, 25);
             this.pF_PassTrafficFactBindingNavigator.TabIndex = 3;
             this.pF_PassTrafficFactBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -476,7 +564,7 @@ namespace IDF_KPI_t
             this.tabPageCurRate.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageCurRate.Name = "tabPageCurRate";
             this.tabPageCurRate.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageCurRate.Size = new System.Drawing.Size(945, 424);
+            this.tabPageCurRate.Size = new System.Drawing.Size(771, 424);
             this.tabPageCurRate.TabIndex = 4;
             this.tabPageCurRate.Text = "Курс валюты";
             this.tabPageCurRate.UseVisualStyleBackColor = true;
@@ -500,7 +588,7 @@ namespace IDF_KPI_t
             this.pF_CurrencyRateDataGridView.Location = new System.Drawing.Point(4, 4);
             this.pF_CurrencyRateDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.pF_CurrencyRateDataGridView.Name = "pF_CurrencyRateDataGridView";
-            this.pF_CurrencyRateDataGridView.Size = new System.Drawing.Size(937, 391);
+            this.pF_CurrencyRateDataGridView.Size = new System.Drawing.Size(763, 391);
             this.pF_CurrencyRateDataGridView.TabIndex = 5;
             this.pF_CurrencyRateDataGridView.SortStringChanged += new System.EventHandler(this.DataGridView_SortStringChanged);
             this.pF_CurrencyRateDataGridView.FilterStringChanged += new System.EventHandler(this.DataGridView_FilterStringChanged);
@@ -559,6 +647,33 @@ namespace IDF_KPI_t
             this.dataGridViewTextBoxColumn32.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn32.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "RatePlan";
+            this.dataGridViewTextBoxColumn33.HeaderText = "Курс, план";
+            this.dataGridViewTextBoxColumn33.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "RateForecast";
+            this.dataGridViewTextBoxColumn34.HeaderText = "Курс, прогноз";
+            this.dataGridViewTextBoxColumn34.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn29.HeaderText = "id";
+            this.dataGridViewTextBoxColumn29.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.dataGridViewTextBoxColumn29.Visible = false;
+            // 
             // pF_CurrencyRateBindingSource
             // 
             this.pF_CurrencyRateBindingSource.DataMember = "PF_CurrencyRate";
@@ -592,7 +707,7 @@ namespace IDF_KPI_t
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(937, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(763, 25);
             this.bindingNavigator1.TabIndex = 4;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -698,7 +813,7 @@ namespace IDF_KPI_t
             this.tabPageKPI.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageKPI.Name = "tabPageKPI";
             this.tabPageKPI.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageKPI.Size = new System.Drawing.Size(945, 424);
+            this.tabPageKPI.Size = new System.Drawing.Size(771, 424);
             this.tabPageKPI.TabIndex = 2;
             this.tabPageKPI.Text = "КК и СЧ";
             this.tabPageKPI.UseVisualStyleBackColor = true;
@@ -724,12 +839,102 @@ namespace IDF_KPI_t
             this.pF_KPIDataGridView.Location = new System.Drawing.Point(4, 4);
             this.pF_KPIDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.pF_KPIDataGridView.Name = "pF_KPIDataGridView";
-            this.pF_KPIDataGridView.Size = new System.Drawing.Size(937, 391);
+            this.pF_KPIDataGridView.Size = new System.Drawing.Size(763, 391);
             this.pF_KPIDataGridView.TabIndex = 6;
             this.pF_KPIDataGridView.SortStringChanged += new System.EventHandler(this.DataGridView_SortStringChanged);
             this.pF_KPIDataGridView.FilterStringChanged += new System.EventHandler(this.DataGridView_FilterStringChanged);
             this.pF_KPIDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellValueChanged);
             this.pF_KPIDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pF_PassTrafficDataGridView_DataError);
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Год";
+            this.yearDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020"});
+            this.yearDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.yearDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // monthDataGridViewTextBoxColumn
+            // 
+            this.monthDataGridViewTextBoxColumn.DataPropertyName = "Month";
+            this.monthDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.monthDataGridViewTextBoxColumn.HeaderText = "Месяц";
+            this.monthDataGridViewTextBoxColumn.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.monthDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
+            this.monthDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.monthDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // storeCodeDataGridViewTextBoxColumn1
+            // 
+            this.storeCodeDataGridViewTextBoxColumn1.DataPropertyName = "StoreCode";
+            this.storeCodeDataGridViewTextBoxColumn1.HeaderText = "Магазин";
+            this.storeCodeDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.storeCodeDataGridViewTextBoxColumn1.Name = "storeCodeDataGridViewTextBoxColumn1";
+            this.storeCodeDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // avgReceptPlanDataGridViewTextBoxColumn
+            // 
+            this.avgReceptPlanDataGridViewTextBoxColumn.DataPropertyName = "AvgReceptPlan";
+            this.avgReceptPlanDataGridViewTextBoxColumn.HeaderText = "СЧ план";
+            this.avgReceptPlanDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.avgReceptPlanDataGridViewTextBoxColumn.Name = "avgReceptPlanDataGridViewTextBoxColumn";
+            this.avgReceptPlanDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // avgReceptForecastDataGridViewTextBoxColumn
+            // 
+            this.avgReceptForecastDataGridViewTextBoxColumn.DataPropertyName = "AvgReceptForecast";
+            this.avgReceptForecastDataGridViewTextBoxColumn.HeaderText = "СЧ прогноз";
+            this.avgReceptForecastDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.avgReceptForecastDataGridViewTextBoxColumn.Name = "avgReceptForecastDataGridViewTextBoxColumn";
+            this.avgReceptForecastDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // convCoeffPlanDataGridViewTextBoxColumn
+            // 
+            this.convCoeffPlanDataGridViewTextBoxColumn.DataPropertyName = "ConvCoeffPlan";
+            this.convCoeffPlanDataGridViewTextBoxColumn.HeaderText = "КК план";
+            this.convCoeffPlanDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.convCoeffPlanDataGridViewTextBoxColumn.Name = "convCoeffPlanDataGridViewTextBoxColumn";
+            this.convCoeffPlanDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // convCoeffForecastDataGridViewTextBoxColumn
+            // 
+            this.convCoeffForecastDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.convCoeffForecastDataGridViewTextBoxColumn.DataPropertyName = "ConvCoeffForecast";
+            this.convCoeffForecastDataGridViewTextBoxColumn.HeaderText = "КК прогноз";
+            this.convCoeffForecastDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.convCoeffForecastDataGridViewTextBoxColumn.Name = "convCoeffForecastDataGridViewTextBoxColumn";
+            this.convCoeffForecastDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.idDataGridViewTextBoxColumn1.Visible = false;
             // 
             // pF_KPIBindingSource
             // 
@@ -763,7 +968,7 @@ namespace IDF_KPI_t
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bindingNavigator2.PositionItem = this.toolStripTextBox2;
-            this.bindingNavigator2.Size = new System.Drawing.Size(937, 25);
+            this.bindingNavigator2.Size = new System.Drawing.Size(763, 25);
             this.bindingNavigator2.TabIndex = 5;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -861,7 +1066,7 @@ namespace IDF_KPI_t
             this.tabPageCatQuota.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageCatQuota.Name = "tabPageCatQuota";
             this.tabPageCatQuota.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageCatQuota.Size = new System.Drawing.Size(945, 424);
+            this.tabPageCatQuota.Size = new System.Drawing.Size(771, 424);
             this.tabPageCatQuota.TabIndex = 3;
             this.tabPageCatQuota.Text = "Доли категорий";
             // 
@@ -885,12 +1090,111 @@ namespace IDF_KPI_t
             this.pF_CategoryQuotaDataGridView.Location = new System.Drawing.Point(4, 4);
             this.pF_CategoryQuotaDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.pF_CategoryQuotaDataGridView.Name = "pF_CategoryQuotaDataGridView";
-            this.pF_CategoryQuotaDataGridView.Size = new System.Drawing.Size(937, 391);
+            this.pF_CategoryQuotaDataGridView.Size = new System.Drawing.Size(763, 391);
             this.pF_CategoryQuotaDataGridView.TabIndex = 7;
             this.pF_CategoryQuotaDataGridView.SortStringChanged += new System.EventHandler(this.DataGridView_SortStringChanged);
             this.pF_CategoryQuotaDataGridView.FilterStringChanged += new System.EventHandler(this.DataGridView_FilterStringChanged);
             this.pF_CategoryQuotaDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellValueChanged);
             this.pF_CategoryQuotaDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pF_PassTrafficDataGridView_DataError);
+            // 
+            // yearDataGridViewTextBoxColumn1
+            // 
+            this.yearDataGridViewTextBoxColumn1.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.yearDataGridViewTextBoxColumn1.HeaderText = "Год";
+            this.yearDataGridViewTextBoxColumn1.Items.AddRange(new object[] {
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020"});
+            this.yearDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.yearDataGridViewTextBoxColumn1.Name = "yearDataGridViewTextBoxColumn1";
+            this.yearDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.yearDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // monthDataGridViewTextBoxColumn1
+            // 
+            this.monthDataGridViewTextBoxColumn1.DataPropertyName = "Month";
+            this.monthDataGridViewTextBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.monthDataGridViewTextBoxColumn1.HeaderText = "Месяц";
+            this.monthDataGridViewTextBoxColumn1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.monthDataGridViewTextBoxColumn1.MinimumWidth = 22;
+            this.monthDataGridViewTextBoxColumn1.Name = "monthDataGridViewTextBoxColumn1";
+            this.monthDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.monthDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // categoryDataGridViewTextBoxColumn
+            // 
+            this.categoryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
+            this.categoryDataGridViewTextBoxColumn.DataSource = this.pFCategoryBindingSource;
+            this.categoryDataGridViewTextBoxColumn.DisplayMember = "Description";
+            this.categoryDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.categoryDataGridViewTextBoxColumn.HeaderText = "Категория";
+            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
+            this.categoryDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.categoryDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.categoryDataGridViewTextBoxColumn.ValueMember = "Code";
+            this.categoryDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // pFCategoryBindingSource
+            // 
+            this.pFCategoryBindingSource.DataMember = "PF_Category";
+            this.pFCategoryBindingSource.DataSource = this.iDF_OUTDataSet1;
+            // 
+            // iDF_OUTDataSet1
+            // 
+            this.iDF_OUTDataSet1.DataSetName = "IDF_OUTDataSet";
+            this.iDF_OUTDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // storeCodeDataGridViewTextBoxColumn2
+            // 
+            this.storeCodeDataGridViewTextBoxColumn2.DataPropertyName = "StoreCode";
+            this.storeCodeDataGridViewTextBoxColumn2.HeaderText = "Магазин";
+            this.storeCodeDataGridViewTextBoxColumn2.MinimumWidth = 22;
+            this.storeCodeDataGridViewTextBoxColumn2.Name = "storeCodeDataGridViewTextBoxColumn2";
+            this.storeCodeDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // quotaPlanDataGridViewTextBoxColumn
+            // 
+            this.quotaPlanDataGridViewTextBoxColumn.DataPropertyName = "QuotaPlan";
+            this.quotaPlanDataGridViewTextBoxColumn.HeaderText = "Доля план";
+            this.quotaPlanDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.quotaPlanDataGridViewTextBoxColumn.Name = "quotaPlanDataGridViewTextBoxColumn";
+            this.quotaPlanDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // quotaForecastDataGridViewTextBoxColumn
+            // 
+            this.quotaForecastDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quotaForecastDataGridViewTextBoxColumn.DataPropertyName = "QuotaForecast";
+            this.quotaForecastDataGridViewTextBoxColumn.HeaderText = "Доля прогноз";
+            this.quotaForecastDataGridViewTextBoxColumn.MinimumWidth = 22;
+            this.quotaForecastDataGridViewTextBoxColumn.Name = "quotaForecastDataGridViewTextBoxColumn";
+            this.quotaForecastDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // idDataGridViewTextBoxColumn2
+            // 
+            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn2.MinimumWidth = 22;
+            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
+            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.idDataGridViewTextBoxColumn2.Visible = false;
             // 
             // pF_CategoryQuotaBindingSource
             // 
@@ -924,7 +1228,7 @@ namespace IDF_KPI_t
             this.bindingNavigator3.Name = "bindingNavigator3";
             this.bindingNavigator3.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bindingNavigator3.PositionItem = this.toolStripTextBox3;
-            this.bindingNavigator3.Size = new System.Drawing.Size(937, 25);
+            this.bindingNavigator3.Size = new System.Drawing.Size(763, 25);
             this.bindingNavigator3.TabIndex = 6;
             this.bindingNavigator3.Text = "bindingNavigator3";
             // 
@@ -1022,7 +1326,7 @@ namespace IDF_KPI_t
             this.tabPagePassTraffic.Margin = new System.Windows.Forms.Padding(4);
             this.tabPagePassTraffic.Name = "tabPagePassTraffic";
             this.tabPagePassTraffic.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPagePassTraffic.Size = new System.Drawing.Size(945, 424);
+            this.tabPagePassTraffic.Size = new System.Drawing.Size(771, 424);
             this.tabPagePassTraffic.TabIndex = 5;
             this.tabPagePassTraffic.Text = "Пассажиропоток План";
             this.tabPagePassTraffic.UseVisualStyleBackColor = true;
@@ -1047,12 +1351,113 @@ namespace IDF_KPI_t
             this.pF_PassTrafficDataGridView.Location = new System.Drawing.Point(4, 4);
             this.pF_PassTrafficDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.pF_PassTrafficDataGridView.Name = "pF_PassTrafficDataGridView";
-            this.pF_PassTrafficDataGridView.Size = new System.Drawing.Size(937, 391);
+            this.pF_PassTrafficDataGridView.Size = new System.Drawing.Size(763, 391);
             this.pF_PassTrafficDataGridView.TabIndex = 8;
             this.pF_PassTrafficDataGridView.SortStringChanged += new System.EventHandler(this.DataGridView_SortStringChanged);
             this.pF_PassTrafficDataGridView.FilterStringChanged += new System.EventHandler(this.DataGridView_FilterStringChanged);
             this.pF_PassTrafficDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellValueChanged);
             this.pF_PassTrafficDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pF_PassTrafficDataGridView_DataError);
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "Year";
+            this.dataGridViewTextBoxColumn36.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn36.HeaderText = "Год";
+            this.dataGridViewTextBoxColumn36.Items.AddRange(new object[] {
+            "2017",
+            "2018"});
+            this.dataGridViewTextBoxColumn36.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "Month";
+            this.dataGridViewTextBoxColumn37.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn37.HeaderText = "Месяц";
+            this.dataGridViewTextBoxColumn37.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.dataGridViewTextBoxColumn37.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "Terminal";
+            this.dataGridViewTextBoxColumn38.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn38.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.dataGridViewTextBoxColumn38.HeaderText = "Терминал";
+            this.dataGridViewTextBoxColumn38.Items.AddRange(new object[] {
+            "SVO-A",
+            "SVO-B",
+            "SVO-D",
+            "SVO-E",
+            "SVO-F"});
+            this.dataGridViewTextBoxColumn38.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            this.dataGridViewTextBoxColumn38.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "DestinationGroup";
+            this.dataGridViewTextBoxColumn39.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.dataGridViewTextBoxColumn39.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.dataGridViewTextBoxColumn39.HeaderText = "МВЛ/ВВЛ";
+            this.dataGridViewTextBoxColumn39.Items.AddRange(new object[] {
+            "МВЛ",
+            "ВВЛ"});
+            this.dataGridViewTextBoxColumn39.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            this.dataGridViewTextBoxColumn39.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "Plan";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn40.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn40.HeaderText = "План";
+            this.dataGridViewTextBoxColumn40.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.dataGridViewTextBoxColumn40.Width = 67;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "Forecast";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn41.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewTextBoxColumn41.HeaderText = "Прогноз";
+            this.dataGridViewTextBoxColumn41.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            this.dataGridViewTextBoxColumn41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn35.HeaderText = "id";
+            this.dataGridViewTextBoxColumn35.MinimumWidth = 22;
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.dataGridViewTextBoxColumn35.Visible = false;
             // 
             // pF_PassTrafficBindingSource
             // 
@@ -1086,7 +1491,7 @@ namespace IDF_KPI_t
             this.bindingNavigator4.Name = "bindingNavigator4";
             this.bindingNavigator4.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bindingNavigator4.PositionItem = this.toolStripTextBox4;
-            this.bindingNavigator4.Size = new System.Drawing.Size(937, 25);
+            this.bindingNavigator4.Size = new System.Drawing.Size(763, 25);
             this.bindingNavigator4.TabIndex = 7;
             this.bindingNavigator4.Text = "bindingNavigator4";
             // 
@@ -1184,10 +1589,120 @@ namespace IDF_KPI_t
             this.tabPagePassTrafficFact.Margin = new System.Windows.Forms.Padding(4);
             this.tabPagePassTrafficFact.Name = "tabPagePassTrafficFact";
             this.tabPagePassTrafficFact.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPagePassTrafficFact.Size = new System.Drawing.Size(945, 424);
+            this.tabPagePassTrafficFact.Size = new System.Drawing.Size(771, 424);
             this.tabPagePassTrafficFact.TabIndex = 0;
             this.tabPagePassTrafficFact.Text = "Пассажиропоток Факт";
             this.tabPagePassTrafficFact.UseVisualStyleBackColor = true;
+            // 
+            // pF_PassTrafficFactDataGridView
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pF_PassTrafficFactDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.pF_PassTrafficFactDataGridView.AutoGenerateColumns = false;
+            this.pF_PassTrafficFactDataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.pF_PassTrafficFactDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pF_PassTrafficFactDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Date,
+            this.Month,
+            this.Year,
+            this.Terminal,
+            this.DestinationGroup,
+            this.PassQtyFact,
+            this.idDataGridViewTextBoxColumn3});
+            this.pF_PassTrafficFactDataGridView.DataSource = this.pF_PassTrafficFactBindingSource;
+            this.pF_PassTrafficFactDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pF_PassTrafficFactDataGridView.FilterAndSortEnabled = true;
+            this.pF_PassTrafficFactDataGridView.Location = new System.Drawing.Point(4, 4);
+            this.pF_PassTrafficFactDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.pF_PassTrafficFactDataGridView.Name = "pF_PassTrafficFactDataGridView";
+            this.pF_PassTrafficFactDataGridView.Size = new System.Drawing.Size(763, 391);
+            this.pF_PassTrafficFactDataGridView.TabIndex = 8;
+            this.pF_PassTrafficFactDataGridView.SortStringChanged += new System.EventHandler(this.DataGridView_SortStringChanged);
+            this.pF_PassTrafficFactDataGridView.FilterStringChanged += new System.EventHandler(this.DataGridView_FilterStringChanged);
+            this.pF_PassTrafficFactDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellValueChanged);
+            this.pF_PassTrafficFactDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pF_PassTrafficDataGridView_DataError);
+            this.pF_PassTrafficFactDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_EditingControlShowing);
+            // 
+            // Date
+            // 
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Дата";
+            this.Date.MinimumWidth = 22;
+            this.Date.Name = "Date";
+            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Date.Width = 71;
+            // 
+            // Month
+            // 
+            this.Month.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Month.DataPropertyName = "Month";
+            this.Month.HeaderText = "Месяц";
+            this.Month.MinimumWidth = 22;
+            this.Month.Name = "Month";
+            this.Month.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Month.Width = 74;
+            // 
+            // Year
+            // 
+            this.Year.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Year.DataPropertyName = "Year";
+            this.Year.HeaderText = "Год";
+            this.Year.MinimumWidth = 22;
+            this.Year.Name = "Year";
+            this.Year.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Year.Width = 56;
+            // 
+            // Terminal
+            // 
+            this.Terminal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Terminal.DataPropertyName = "Terminal";
+            this.Terminal.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.Terminal.HeaderText = "Терминал";
+            this.Terminal.Items.AddRange(new object[] {
+            "SVO-A",
+            "SVO-B",
+            "SVO-D",
+            "SVO-E",
+            "SVO-F"});
+            this.Terminal.MinimumWidth = 22;
+            this.Terminal.Name = "Terminal";
+            this.Terminal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Terminal.Width = 99;
+            // 
+            // DestinationGroup
+            // 
+            this.DestinationGroup.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.DestinationGroup.DataPropertyName = "DestinationGroup";
+            this.DestinationGroup.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.DestinationGroup.HeaderText = "ВВЛ/МВЛ";
+            this.DestinationGroup.Items.AddRange(new object[] {
+            "ВВЛ",
+            "МВЛ"});
+            this.DestinationGroup.MinimumWidth = 22;
+            this.DestinationGroup.Name = "DestinationGroup";
+            this.DestinationGroup.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.DestinationGroup.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.DestinationGroup.Width = 93;
+            // 
+            // PassQtyFact
+            // 
+            this.PassQtyFact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PassQtyFact.DataPropertyName = "PassQtyFact";
+            this.PassQtyFact.HeaderText = "Пасспоток";
+            this.PassQtyFact.MinimumWidth = 22;
+            this.PassQtyFact.Name = "PassQtyFact";
+            this.PassQtyFact.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // idDataGridViewTextBoxColumn3
+            // 
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn3.MinimumWidth = 22;
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.idDataGridViewTextBoxColumn3.Visible = false;
             // 
             // pF_PassTrafficFactBindingSource
             // 
@@ -1221,7 +1736,7 @@ namespace IDF_KPI_t
             this.bindingNavigator5.Name = "bindingNavigator5";
             this.bindingNavigator5.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bindingNavigator5.PositionItem = this.toolStripTextBox5;
-            this.bindingNavigator5.Size = new System.Drawing.Size(937, 25);
+            this.bindingNavigator5.Size = new System.Drawing.Size(763, 25);
             this.bindingNavigator5.TabIndex = 8;
             this.bindingNavigator5.Text = "bindingNavigator5";
             // 
@@ -1361,21 +1876,11 @@ namespace IDF_KPI_t
             this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.dataGridViewTextBoxColumn26.ValueMember = "Code";
             // 
-            // pFCategoryBindingSource
-            // 
-            this.pFCategoryBindingSource.DataMember = "PF_Category";
-            this.pFCategoryBindingSource.DataSource = this.iDF_OUTDataSet1;
-            // 
-            // iDF_OUTDataSet1
-            // 
-            this.iDF_OUTDataSet1.DataSetName = "IDF_OUTDataSet";
-            this.iDF_OUTDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Location = new System.Drawing.Point(0, 490);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(953, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(779, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -1391,7 +1896,6 @@ namespace IDF_KPI_t
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-
             // 
             // pF_PassTrafficFactTableAdapter
             // 
@@ -1433,166 +1937,6 @@ namespace IDF_KPI_t
             // pF_CategoryTableAdapter
             // 
             this.pF_CategoryTableAdapter.ClearBeforeFill = true;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Год";
-            this.yearDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020"});
-            this.yearDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.yearDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // monthDataGridViewTextBoxColumn
-            // 
-            this.monthDataGridViewTextBoxColumn.DataPropertyName = "Month";
-            this.monthDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.monthDataGridViewTextBoxColumn.HeaderText = "Месяц";
-            this.monthDataGridViewTextBoxColumn.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.monthDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.monthDataGridViewTextBoxColumn.Name = "monthDataGridViewTextBoxColumn";
-            this.monthDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.monthDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this.dataGridViewTextBoxColumn36.DataPropertyName = "Year";
-            this.dataGridViewTextBoxColumn36.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn36.HeaderText = "Год";
-            this.dataGridViewTextBoxColumn36.Items.AddRange(new object[] {
-            "2017",
-            "2018"});
-            this.dataGridViewTextBoxColumn36.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
-            this.dataGridViewTextBoxColumn36.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this.dataGridViewTextBoxColumn37.DataPropertyName = "Month";
-            this.dataGridViewTextBoxColumn37.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn37.HeaderText = "Месяц";
-            this.dataGridViewTextBoxColumn37.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.dataGridViewTextBoxColumn37.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
-            this.dataGridViewTextBoxColumn37.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this.dataGridViewTextBoxColumn38.DataPropertyName = "Terminal";
-            this.dataGridViewTextBoxColumn38.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn38.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.dataGridViewTextBoxColumn38.HeaderText = "Терминал";
-            this.dataGridViewTextBoxColumn38.Items.AddRange(new object[] {
-            "SVO-A",
-            "SVO-B",
-            "SVO-D",
-            "SVO-E",
-            "SVO-F"});
-            this.dataGridViewTextBoxColumn38.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
-            this.dataGridViewTextBoxColumn38.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this.dataGridViewTextBoxColumn39.DataPropertyName = "DestinationGroup";
-            this.dataGridViewTextBoxColumn39.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn39.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.dataGridViewTextBoxColumn39.HeaderText = "МВЛ/ВВЛ";
-            this.dataGridViewTextBoxColumn39.Items.AddRange(new object[] {
-            "МВЛ",
-            "ВВЛ"});
-            this.dataGridViewTextBoxColumn39.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
-            this.dataGridViewTextBoxColumn39.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // yearDataGridViewTextBoxColumn1
-            // 
-            this.yearDataGridViewTextBoxColumn1.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.yearDataGridViewTextBoxColumn1.HeaderText = "Год";
-            this.yearDataGridViewTextBoxColumn1.Items.AddRange(new object[] {
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020"});
-            this.yearDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.yearDataGridViewTextBoxColumn1.Name = "yearDataGridViewTextBoxColumn1";
-            this.yearDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.yearDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // monthDataGridViewTextBoxColumn1
-            // 
-            this.monthDataGridViewTextBoxColumn1.DataPropertyName = "Month";
-            this.monthDataGridViewTextBoxColumn1.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.monthDataGridViewTextBoxColumn1.HeaderText = "Месяц";
-            this.monthDataGridViewTextBoxColumn1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.monthDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.monthDataGridViewTextBoxColumn1.Name = "monthDataGridViewTextBoxColumn1";
-            this.monthDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.monthDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.DataSource = this.pFCategoryBindingSource;
-            this.categoryDataGridViewTextBoxColumn.DisplayMember = "Description";
-            this.categoryDataGridViewTextBoxColumn.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Категория";
-            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.categoryDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.categoryDataGridViewTextBoxColumn.ValueMember = "Code";
-            this.categoryDataGridViewTextBoxColumn.Width = 101;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1730,7 +2074,6 @@ namespace IDF_KPI_t
             this.dataGridViewTextBoxColumn15.MinimumWidth = 22;
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.dataGridViewTextBoxColumn15.Width = 58;
             // 
             // dataGridViewTextBoxColumn16
             // 
@@ -1753,341 +2096,6 @@ namespace IDF_KPI_t
             this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.dataGridViewTextBoxColumn17.Visible = false;
             // 
-            // pF_StoreDateActiveDataGridView
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pF_StoreDateActiveDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.pF_StoreDateActiveDataGridView.AutoGenerateColumns = false;
-            this.pF_StoreDateActiveDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pF_StoreDateActiveDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dateDataGridViewTextBoxColumn,
-            this.storeCodeDataGridViewTextBoxColumn,
-            this.planDataGridViewTextBoxColumn,
-            this.forecastDataGridViewTextBoxColumn,
-            this.factDataGridViewTextBoxColumn,
-            this.idDataGridViewTextBoxColumn});
-            this.pF_StoreDateActiveDataGridView.DataSource = this.pF_StoreDateActiveBindingSource;
-            this.pF_StoreDateActiveDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pF_StoreDateActiveDataGridView.FilterAndSortEnabled = true;
-            this.pF_StoreDateActiveDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.pF_StoreDateActiveDataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.pF_StoreDateActiveDataGridView.Name = "pF_StoreDateActiveDataGridView";
-            this.pF_StoreDateActiveDataGridView.Size = new System.Drawing.Size(937, 391);
-            this.pF_StoreDateActiveDataGridView.TabIndex = 4;
-            this.pF_StoreDateActiveDataGridView.SortStringChanged += new System.EventHandler(this.DataGridView_SortStringChanged);
-            this.pF_StoreDateActiveDataGridView.FilterStringChanged += new System.EventHandler(this.DataGridView_FilterStringChanged);
-            this.pF_StoreDateActiveDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellValueChanged);
-            this.pF_StoreDateActiveDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pF_PassTrafficDataGridView_DataError);
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dateDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // storeCodeDataGridViewTextBoxColumn
-            // 
-            this.storeCodeDataGridViewTextBoxColumn.DataPropertyName = "StoreCode";
-            this.storeCodeDataGridViewTextBoxColumn.HeaderText = "Магазин";
-            this.storeCodeDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.storeCodeDataGridViewTextBoxColumn.Name = "storeCodeDataGridViewTextBoxColumn";
-            this.storeCodeDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // planDataGridViewTextBoxColumn
-            // 
-            this.planDataGridViewTextBoxColumn.DataPropertyName = "Plan";
-            this.planDataGridViewTextBoxColumn.HeaderText = "План";
-            this.planDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.planDataGridViewTextBoxColumn.Name = "planDataGridViewTextBoxColumn";
-            this.planDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // forecastDataGridViewTextBoxColumn
-            // 
-            this.forecastDataGridViewTextBoxColumn.DataPropertyName = "Forecast";
-            this.forecastDataGridViewTextBoxColumn.HeaderText = "Прогноз";
-            this.forecastDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.forecastDataGridViewTextBoxColumn.Name = "forecastDataGridViewTextBoxColumn";
-            this.forecastDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // factDataGridViewTextBoxColumn
-            // 
-            this.factDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.factDataGridViewTextBoxColumn.DataPropertyName = "Fact";
-            this.factDataGridViewTextBoxColumn.HeaderText = "Факт";
-            this.factDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.factDataGridViewTextBoxColumn.Name = "factDataGridViewTextBoxColumn";
-            this.factDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this.dataGridViewTextBoxColumn33.DataPropertyName = "RatePlan";
-            this.dataGridViewTextBoxColumn33.HeaderText = "Курс, план";
-            this.dataGridViewTextBoxColumn33.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
-            this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this.dataGridViewTextBoxColumn34.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn34.DataPropertyName = "RateForecast";
-            this.dataGridViewTextBoxColumn34.HeaderText = "Курс, прогноз";
-            this.dataGridViewTextBoxColumn34.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
-            this.dataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn29.HeaderText = "id";
-            this.dataGridViewTextBoxColumn29.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.dataGridViewTextBoxColumn29.Visible = false;
-            // 
-            // storeCodeDataGridViewTextBoxColumn1
-            // 
-            this.storeCodeDataGridViewTextBoxColumn1.DataPropertyName = "StoreCode";
-            this.storeCodeDataGridViewTextBoxColumn1.HeaderText = "Магазин";
-            this.storeCodeDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.storeCodeDataGridViewTextBoxColumn1.Name = "storeCodeDataGridViewTextBoxColumn1";
-            this.storeCodeDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // avgReceptPlanDataGridViewTextBoxColumn
-            // 
-            this.avgReceptPlanDataGridViewTextBoxColumn.DataPropertyName = "AvgReceptPlan";
-            this.avgReceptPlanDataGridViewTextBoxColumn.HeaderText = "СЧ план";
-            this.avgReceptPlanDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.avgReceptPlanDataGridViewTextBoxColumn.Name = "avgReceptPlanDataGridViewTextBoxColumn";
-            this.avgReceptPlanDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // avgReceptForecastDataGridViewTextBoxColumn
-            // 
-            this.avgReceptForecastDataGridViewTextBoxColumn.DataPropertyName = "AvgReceptForecast";
-            this.avgReceptForecastDataGridViewTextBoxColumn.HeaderText = "СЧ прогноз";
-            this.avgReceptForecastDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.avgReceptForecastDataGridViewTextBoxColumn.Name = "avgReceptForecastDataGridViewTextBoxColumn";
-            this.avgReceptForecastDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // convCoeffPlanDataGridViewTextBoxColumn
-            // 
-            this.convCoeffPlanDataGridViewTextBoxColumn.DataPropertyName = "ConvCoeffPlan";
-            this.convCoeffPlanDataGridViewTextBoxColumn.HeaderText = "КК план";
-            this.convCoeffPlanDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.convCoeffPlanDataGridViewTextBoxColumn.Name = "convCoeffPlanDataGridViewTextBoxColumn";
-            this.convCoeffPlanDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // convCoeffForecastDataGridViewTextBoxColumn
-            // 
-            this.convCoeffForecastDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.convCoeffForecastDataGridViewTextBoxColumn.DataPropertyName = "ConvCoeffForecast";
-            this.convCoeffForecastDataGridViewTextBoxColumn.HeaderText = "КК прогноз";
-            this.convCoeffForecastDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.convCoeffForecastDataGridViewTextBoxColumn.Name = "convCoeffForecastDataGridViewTextBoxColumn";
-            this.convCoeffForecastDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn1.MinimumWidth = 22;
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.idDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // storeCodeDataGridViewTextBoxColumn2
-            // 
-            this.storeCodeDataGridViewTextBoxColumn2.DataPropertyName = "StoreCode";
-            this.storeCodeDataGridViewTextBoxColumn2.HeaderText = "Магазин";
-            this.storeCodeDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.storeCodeDataGridViewTextBoxColumn2.Name = "storeCodeDataGridViewTextBoxColumn2";
-            this.storeCodeDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // quotaPlanDataGridViewTextBoxColumn
-            // 
-            this.quotaPlanDataGridViewTextBoxColumn.DataPropertyName = "QuotaPlan";
-            this.quotaPlanDataGridViewTextBoxColumn.HeaderText = "Доля план";
-            this.quotaPlanDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.quotaPlanDataGridViewTextBoxColumn.Name = "quotaPlanDataGridViewTextBoxColumn";
-            this.quotaPlanDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // quotaForecastDataGridViewTextBoxColumn
-            // 
-            this.quotaForecastDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quotaForecastDataGridViewTextBoxColumn.DataPropertyName = "QuotaForecast";
-            this.quotaForecastDataGridViewTextBoxColumn.HeaderText = "Доля прогноз";
-            this.quotaForecastDataGridViewTextBoxColumn.MinimumWidth = 22;
-            this.quotaForecastDataGridViewTextBoxColumn.Name = "quotaForecastDataGridViewTextBoxColumn";
-            this.quotaForecastDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // idDataGridViewTextBoxColumn2
-            // 
-            this.idDataGridViewTextBoxColumn2.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn2.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn2.MinimumWidth = 22;
-            this.idDataGridViewTextBoxColumn2.Name = "idDataGridViewTextBoxColumn2";
-            this.idDataGridViewTextBoxColumn2.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.idDataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this.dataGridViewTextBoxColumn40.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn40.DataPropertyName = "Plan";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.NullValue = null;
-            this.dataGridViewTextBoxColumn40.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTextBoxColumn40.HeaderText = "План";
-            this.dataGridViewTextBoxColumn40.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
-            this.dataGridViewTextBoxColumn40.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.dataGridViewTextBoxColumn40.Width = 67;
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this.dataGridViewTextBoxColumn41.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn41.DataPropertyName = "Forecast";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn41.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewTextBoxColumn41.HeaderText = "Прогноз";
-            this.dataGridViewTextBoxColumn41.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
-            this.dataGridViewTextBoxColumn41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this.dataGridViewTextBoxColumn35.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn35.HeaderText = "id";
-            this.dataGridViewTextBoxColumn35.MinimumWidth = 22;
-            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
-            this.dataGridViewTextBoxColumn35.ReadOnly = true;
-            this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.dataGridViewTextBoxColumn35.Visible = false;
-            // 
-            // pF_PassTrafficFactDataGridView
-            // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pF_PassTrafficFactDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.pF_PassTrafficFactDataGridView.AutoGenerateColumns = false;
-            this.pF_PassTrafficFactDataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            this.pF_PassTrafficFactDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pF_PassTrafficFactDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
-            this.Month,
-            this.Year,
-            this.Terminal,
-            this.DestinationGroup,
-            this.PassQtyFact,
-            this.idDataGridViewTextBoxColumn3});
-            this.pF_PassTrafficFactDataGridView.DataSource = this.pF_PassTrafficFactBindingSource;
-            this.pF_PassTrafficFactDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pF_PassTrafficFactDataGridView.FilterAndSortEnabled = true;
-            this.pF_PassTrafficFactDataGridView.Location = new System.Drawing.Point(4, 4);
-            this.pF_PassTrafficFactDataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.pF_PassTrafficFactDataGridView.Name = "pF_PassTrafficFactDataGridView";
-            this.pF_PassTrafficFactDataGridView.Size = new System.Drawing.Size(937, 391);
-            this.pF_PassTrafficFactDataGridView.TabIndex = 8;
-            this.pF_PassTrafficFactDataGridView.SortStringChanged += new System.EventHandler(this.DataGridView_SortStringChanged);
-            this.pF_PassTrafficFactDataGridView.FilterStringChanged += new System.EventHandler(this.DataGridView_FilterStringChanged);
-            this.pF_PassTrafficFactDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellValueChanged);
-            this.pF_PassTrafficFactDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.pF_PassTrafficDataGridView_DataError);
-            this.pF_PassTrafficFactDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_EditingControlShowing);
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Date.DataPropertyName = "Date";
-            this.Date.HeaderText = "Дата";
-            this.Date.MinimumWidth = 22;
-            this.Date.Name = "Date";
-            this.Date.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Date.Width = 71;
-            // 
-            // Month
-            // 
-            this.Month.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Month.DataPropertyName = "Month";
-            this.Month.HeaderText = "Месяц";
-            this.Month.MinimumWidth = 22;
-            this.Month.Name = "Month";
-            this.Month.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Month.Width = 74;
-            // 
-            // Year
-            // 
-            this.Year.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Year.DataPropertyName = "Year";
-            this.Year.HeaderText = "Год";
-            this.Year.MinimumWidth = 22;
-            this.Year.Name = "Year";
-            this.Year.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Year.Width = 56;
-            // 
-            // Terminal
-            // 
-            this.Terminal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Terminal.DataPropertyName = "Terminal";
-            this.Terminal.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.Terminal.HeaderText = "Терминал";
-            this.Terminal.Items.AddRange(new object[] {
-            "SVO-A",
-            "SVO-B",
-            "SVO-D",
-            "SVO-E",
-            "SVO-F"});
-            this.Terminal.MinimumWidth = 22;
-            this.Terminal.Name = "Terminal";
-            this.Terminal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Terminal.Width = 99;
-            // 
-            // DestinationGroup
-            // 
-            this.DestinationGroup.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.DestinationGroup.DataPropertyName = "DestinationGroup";
-            this.DestinationGroup.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.DestinationGroup.HeaderText = "ВВЛ/МВЛ";
-            this.DestinationGroup.Items.AddRange(new object[] {
-            "ВВЛ",
-            "МВЛ"});
-            this.DestinationGroup.MinimumWidth = 22;
-            this.DestinationGroup.Name = "DestinationGroup";
-            this.DestinationGroup.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.DestinationGroup.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.DestinationGroup.Width = 93;
-            // 
-            // PassQtyFact
-            // 
-            this.PassQtyFact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PassQtyFact.DataPropertyName = "PassQtyFact";
-            this.PassQtyFact.HeaderText = "Пасспоток";
-            this.PassQtyFact.MinimumWidth = 22;
-            this.PassQtyFact.Name = "PassQtyFact";
-            this.PassQtyFact.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // idDataGridViewTextBoxColumn3
-            // 
-            this.idDataGridViewTextBoxColumn3.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn3.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn3.MinimumWidth = 22;
-            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
-            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.idDataGridViewTextBoxColumn3.Visible = false;
-            // 
             // calendarColumn1
             // 
             this.calendarColumn1.DataPropertyName = "Date";
@@ -2101,7 +2109,7 @@ namespace IDF_KPI_t
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 512);
+            this.ClientSize = new System.Drawing.Size(779, 512);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
@@ -2117,6 +2125,7 @@ namespace IDF_KPI_t
             this.tabControl1.ResumeLayout(false);
             this.tabPageStoreDate.ResumeLayout(false);
             this.tabPageStoreDate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pF_StoreDateActiveDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_StoreDateActiveBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iDF_OUTDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactBindingNavigator)).EndInit();
@@ -2139,6 +2148,8 @@ namespace IDF_KPI_t
             this.tabPageCatQuota.ResumeLayout(false);
             this.tabPageCatQuota.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pF_CategoryQuotaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pFCategoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iDF_OUTDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_CategoryQuotaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
             this.bindingNavigator3.ResumeLayout(false);
@@ -2152,15 +2163,12 @@ namespace IDF_KPI_t
             this.bindingNavigator4.PerformLayout();
             this.tabPagePassTrafficFact.ResumeLayout(false);
             this.tabPagePassTrafficFact.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).EndInit();
             this.bindingNavigator5.ResumeLayout(false);
             this.bindingNavigator5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pFCategoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iDF_OUTDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pF_StoreDateActiveDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pF_PassTrafficFactDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2188,7 +2196,7 @@ namespace IDF_KPI_t
         private System.Windows.Forms.BindingSource pFCategoryBindingSource;
         private IDF_OUTDataSetTableAdapters.PF_CategoryTableAdapter pF_CategoryTableAdapter;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton28;
+        private System.Windows.Forms.ToolStripButton tsbSaveData;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageStoreDate;
         //private System.Windows.Forms.DataGridView pF_StoreDateActiveDataGridView;
@@ -2311,7 +2319,7 @@ namespace IDF_KPI_t
         private System.Windows.Forms.ToolStripButton toolStripButton33;
         private System.Windows.Forms.ToolStripButton toolStripButton34;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton tsbRevert;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private CalendarColumn calendarColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
@@ -2328,7 +2336,7 @@ namespace IDF_KPI_t
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.ToolStripButton toolStripButton14;
+        private System.Windows.Forms.ToolStripButton tsbAutoRowAddMode;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private CalendarColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Month;
@@ -2363,6 +2371,7 @@ namespace IDF_KPI_t
         private System.Windows.Forms.DataGridViewTextBoxColumn quotaPlanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quotaForecastDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.ToolStripButton tsbLoadExcel;
     }
 }
 

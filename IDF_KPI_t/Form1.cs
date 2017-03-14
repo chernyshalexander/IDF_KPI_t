@@ -18,7 +18,7 @@ namespace IDF_KPI_t
         public FormMain()
         {
             InitializeComponent();
-            
+
         }
 
 
@@ -43,25 +43,28 @@ namespace IDF_KPI_t
             pF_PassTrafficFactDataGridView.AllowUserToAddRows = Properties.Settings.Default.UserCanAddRow;
             pF_StoreDateActiveDataGridView.AllowUserToAddRows = Properties.Settings.Default.UserCanAddRow;
             pF_PassTrafficDataGridView.AllowUserToAddRows = Properties.Settings.Default.UserCanAddRow;
-            toolStripButton14.Checked = Properties.Settings.Default.UserCanAddRow;
-            if (toolStripButton14.Checked) { toolStripButton14.BackColor = Color.PaleGreen; } else
-            { toolStripButton14.BackColor = Color.LightGray; }
+            tsbAutoRowAddMode.Checked = Properties.Settings.Default.UserCanAddRow;
+            if (tsbAutoRowAddMode.Checked)
+            { tsbAutoRowAddMode.BackColor = Color.PaleGreen; }
+            else
+            { tsbAutoRowAddMode.BackColor = Color.LightGray; }
 
         }
 
         private void SaveAutoRowAddMode()
         {
-            Properties.Settings.Default.UserCanAddRow = toolStripButton14.Checked;
+            Properties.Settings.Default.UserCanAddRow = tsbAutoRowAddMode.Checked;
             pF_CategoryQuotaDataGridView.AllowUserToAddRows = Properties.Settings.Default.UserCanAddRow;
             pF_CurrencyRateDataGridView.AllowUserToAddRows = Properties.Settings.Default.UserCanAddRow;
             pF_KPIDataGridView.AllowUserToAddRows = Properties.Settings.Default.UserCanAddRow;
             pF_PassTrafficFactDataGridView.AllowUserToAddRows = Properties.Settings.Default.UserCanAddRow;
             pF_StoreDateActiveDataGridView.AllowUserToAddRows = Properties.Settings.Default.UserCanAddRow;
             pF_PassTrafficDataGridView.AllowUserToAddRows = Properties.Settings.Default.UserCanAddRow;
-            toolStripButton14.Checked = Properties.Settings.Default.UserCanAddRow;
-            if (toolStripButton14.Checked) { toolStripButton14.BackColor = Color.PaleGreen; }
+            tsbAutoRowAddMode.Checked = Properties.Settings.Default.UserCanAddRow;
+            if (tsbAutoRowAddMode.Checked)
+            { tsbAutoRowAddMode.BackColor = Color.PaleGreen; }
             else
-            { toolStripButton14.BackColor = Color.LightGray; }
+            { tsbAutoRowAddMode.BackColor = Color.LightGray; }
 
         }
 
@@ -117,17 +120,6 @@ namespace IDF_KPI_t
         private void DataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             EditedNotSaved = true;
-            //if (sender == pF_PassTrafficFactDataGridView & e.ColumnIndex==0 & e.RowIndex>-1) 
-            //{
-            //    pF_PassTrafficFactDataGridView.Rows[e.RowIndex].Cells[1].Value =
-            //        (   Convert.ToDateTime( pF_PassTrafficFactDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString()).Month  );
-                
-            //    pF_PassTrafficFactDataGridView.Rows[e.RowIndex].Cells[2].Value =
-            //         (Convert.ToDateTime(pF_PassTrafficFactDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString()).Year);
-
-            //    pF_PassTrafficFactDataGridView.Invalidate();
-
-            //}
         }
 
 
@@ -145,8 +137,8 @@ namespace IDF_KPI_t
             var currentcell = pF_PassTrafficFactDataGridView.CurrentCellAddress;
             var sendingCB = sender as CalendarEditingControl;
 
-            pF_PassTrafficFactDataGridView.Rows[currentcell.Y].Cells[1].Value = 
-        
+            pF_PassTrafficFactDataGridView.Rows[currentcell.Y].Cells[1].Value =
+
                (Convert.ToDateTime(sendingCB.EditingControlFormattedValue.ToString()).Month);
 
             pF_PassTrafficFactDataGridView.Rows[currentcell.Y].Cells[2].Value =
@@ -168,7 +160,7 @@ namespace IDF_KPI_t
                     e.Cancel = false;
                 }
             }
-           
+
         }
 
         private void SaveState()
@@ -218,7 +210,7 @@ namespace IDF_KPI_t
             }
         }
 
-        private void toolStripButton7_Click(object sender, EventArgs e)
+        private void Revert_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Все несохраненные изменения будут отменены! Продолжать?", "Внимание!", MessageBoxButtons.YesNo)
                 == System.Windows.Forms.DialogResult.Yes)
@@ -231,7 +223,7 @@ namespace IDF_KPI_t
         {
             ((sender as DataGridView).DataSource as BindingSource).Filter =
                 (sender as AdvancedDataGridView).FilterString;
-            
+
         }
 
         private void DataGridView_SortStringChanged(object sender, EventArgs e)
@@ -240,9 +232,84 @@ namespace IDF_KPI_t
                           (sender as AdvancedDataGridView).SortString;
         }
 
-        private void toolStripButton14_Click(object sender, EventArgs e)
+        private void AutoRowMode_Click(object sender, EventArgs e)
         {
             SaveAutoRowAddMode();
         }
+
+        private void LoadExcel_Click(object sender, EventArgs e)
+        {
+            MessageBoxIcon _icn;
+            string _cpt;
+            ProcResult _pr = LoadExcelPassTraffic();
+
+            if (_pr.Result)
+            {
+                _icn = MessageBoxIcon.Information;
+                _cpt = "Информация";
+
+            }
+            else { _icn = MessageBoxIcon.Error;
+                _cpt = "Ошибка";
+            };
+
+            MessageBox.Show(_pr.Message+Environment.NewLine+_pr.Error ,
+           _cpt, MessageBoxButtons.OK,
+           _icn);
+
+        }
+
+
+        private ProcResult LoadExcelPassTraffic()
+        {
+            bool _res = true;
+            string _msg = String.Empty;
+            string _err = String.Empty;
+            OpenFileDialog op = new OpenFileDialog();
+            op.Filter = "Файлы Excel (*.xlsx) |  *.xlsx";
+            op.ShowDialog();
+            String filePath = op.FileName;
+            DailyPassTrafficProvider pt = new DailyPassTrafficProvider(filePath);
+            if (pt.VerifySource())
+
+            {
+
+                try
+                {
+                    _msg = Utils.Terminal.A + "/" + Utils.Terminal.International;
+                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.A,
+                        Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.A, Utils.Terminal.International));
+
+                    _msg = Utils.Terminal.D + "/" + Utils.Terminal.International;
+                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.D,
+                        Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.D, Utils.Terminal.International));
+
+                    _msg = Utils.Terminal.D + "/" + Utils.Terminal.Domestic; ;
+                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.D,
+                        Utils.Terminal.Domestic, pt.GetTraffic(Utils.Terminal.D, Utils.Terminal.Domestic));
+
+                    _msg = Utils.Terminal.E + "/" + Utils.Terminal.International;
+                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.E,
+                        Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.E, Utils.Terminal.International));
+
+                    _msg = Utils.Terminal.F + "/" + Utils.Terminal.International;
+                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.F,
+                        Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.F, Utils.Terminal.International));
+
+
+                }
+                catch (Exception e)
+                {
+                    return new ProcResult(false, _msg, e.Message);
+
+                };
+                return new ProcResult(true, "Записи добавлены успешно!", String.Empty);
+            }
+            else
+            { return new ProcResult(false, "Неизвестная структура файла!", String.Empty); }
+
+
+        }
+
     }
 }
