@@ -253,9 +253,12 @@ namespace IDF_KPI_t
                 _cpt = "Ошибка";
             };
 
-            MessageBox.Show(_pr.Message+Environment.NewLine+_pr.Error ,
-           _cpt, MessageBoxButtons.OK,
-           _icn);
+            if  (_pr.Show)
+            {
+                MessageBox.Show(_pr.Message + Environment.NewLine + _pr.Error,
+               _cpt, MessageBoxButtons.OK,
+               _icn);
+            }
 
         }
 
@@ -267,48 +270,49 @@ namespace IDF_KPI_t
             string _err = String.Empty;
             OpenFileDialog op = new OpenFileDialog();
             op.Filter = "Файлы Excel (*.xlsx) |  *.xlsx";
-            op.ShowDialog();
-            String filePath = op.FileName;
-            DailyPassTrafficProvider pt = new DailyPassTrafficProvider(filePath);
-            if (pt.VerifySource())
-
+            if (op.ShowDialog() != DialogResult.Cancel)
             {
+                String filePath = op.FileName;
+                DailyPassTrafficProvider pt = new DailyPassTrafficProvider(filePath);
+                if (pt.VerifySource())
 
-                try
                 {
-                    _msg = Utils.Terminal.A + "/" + Utils.Terminal.International;
-                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.A,
-                        Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.A, Utils.Terminal.International));
 
-                    _msg = Utils.Terminal.D + "/" + Utils.Terminal.International;
-                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.D,
-                        Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.D, Utils.Terminal.International));
+                    try
+                    {
+                        _msg = Utils.Terminal.A + "/" + Utils.Terminal.International;
+                        pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.A,
+                            Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.A, Utils.Terminal.International));
 
-                    _msg = Utils.Terminal.D + "/" + Utils.Terminal.Domestic; ;
-                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.D,
-                        Utils.Terminal.Domestic, pt.GetTraffic(Utils.Terminal.D, Utils.Terminal.Domestic));
+                        _msg = Utils.Terminal.D + "/" + Utils.Terminal.International;
+                        pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.D,
+                            Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.D, Utils.Terminal.International));
 
-                    _msg = Utils.Terminal.E + "/" + Utils.Terminal.International;
-                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.E,
-                        Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.E, Utils.Terminal.International));
+                        _msg = Utils.Terminal.D + "/" + Utils.Terminal.Domestic; ;
+                        pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.D,
+                            Utils.Terminal.Domestic, pt.GetTraffic(Utils.Terminal.D, Utils.Terminal.Domestic));
 
-                    _msg = Utils.Terminal.F + "/" + Utils.Terminal.International;
-                    pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.F,
-                        Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.F, Utils.Terminal.International));
+                        _msg = Utils.Terminal.E + "/" + Utils.Terminal.International;
+                        pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.E,
+                            Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.E, Utils.Terminal.International));
+
+                        _msg = Utils.Terminal.F + "/" + Utils.Terminal.International;
+                        pF_PassTrafficFactTableAdapter.Insert(pt.GetFirstDate(), pt.GetFirstDate().Month, pt.GetFirstDate().Year, Utils.Terminal.F,
+                            Utils.Terminal.International, pt.GetTraffic(Utils.Terminal.F, Utils.Terminal.International));
 
 
+                    }
+                    catch (Exception e)
+                    {
+                        return new ProcResult(false, _msg, e.Message,true);
+
+                    };
+                    return new ProcResult(true, "Записи добавлены успешно!", String.Empty,true);
                 }
-                catch (Exception e)
-                {
-                    return new ProcResult(false, _msg, e.Message);
-
-                };
-                return new ProcResult(true, "Записи добавлены успешно!", String.Empty);
+                else
+                { return new ProcResult(false, "Неизвестная структура файла!", String.Empty,true); }
             }
-            else
-            { return new ProcResult(false, "Неизвестная структура файла!", String.Empty); }
-
-
+            else { return new ProcResult(false, String.Empty, String.Empty,false); }
         }
 
     }

@@ -86,7 +86,7 @@ namespace IDF_KPI_t.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LOCALHOST;Initial Catalog=IDF_OUT;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CL-SQL;Initial Catalog=IDF_OUT;Integrated Security=True")]
         public string IDF_OUTConnectionString {
             get {
                 return ((string)(this["IDF_OUTConnectionString"]));

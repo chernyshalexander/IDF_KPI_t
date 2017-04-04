@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="IDF_KPI_t.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <connectionStrings>
+        <add name="IDF_KPI_t.Properties.Settings.IDF_OUTConnectionString"
+            connectionString="Data Source=CL-SQL;Initial Catalog=IDF_OUT;Integrated Security=True"
+            providerName="System.Data.SqlClient" />
+        <add name="IDF_KPI_t.Properties.Settings.IDF_2013ConnectionString"
+            connectionString="Data Source=CL-SQL;Initial Catalog=IDF_2013;Integrated Security=True"
+            providerName="System.Data.SqlClient" />
+    </connectionStrings>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+    </startup>
+    <userSettings>
+        <IDF_KPI_t.Properties.Settings>
+            <setting name="Location" serializeAs="String">
+                <value>0, 0</value>
+            </setting>
+            <setting name="Size" serializeAs="String">
+                <value>800, 600</value>
+            </setting>
+            <setting name="Maximised" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="Minimised" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="UserCanAddRow" serializeAs="String">
+                <value>False</value>
+            </setting>
+        </IDF_KPI_t.Properties.Settings>
+    </userSettings>
+</configuration>

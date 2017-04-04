@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="idf_kpi_de.exe" version="1.0.0.16" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="idf_kpi_de.exe" version="1.0.0.22" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="Images\1487451446_BarChart.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -86,17 +86,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wTvmZ203cgjzpVlc5NuylGutdUpHbF0N/I3+k4CHdvY=</dsig:DigestValue>
+        <dsig:DigestValue>ZbXreU1jJ4ejaaPPoVou8X7+Y4vUZ25843dTuv3EwXg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="idf_kpi_de.exe.config" size="1915">
+  <file name="idf_kpi_de.exe.config" size="1912">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tnQ57QeDxpxWf/dPzWa/C7AvKK4EfNhFubW34zcECZg=</dsig:DigestValue>
+      <dsig:DigestValue>CLXwZiklqIxzTVB6bBifg2hrMnYtlziTnCz3k4APiG4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Images\1487451446_BarChart.ico" size="370070">
